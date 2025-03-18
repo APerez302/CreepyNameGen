@@ -1,5 +1,6 @@
 #include <iostream>
 #include <cstdlib>
+#include <ctime>
 using namespace std;
 
 // I've been watching a lot of CreepCast
@@ -69,6 +70,9 @@ void Names()
     const int MIN_VAL = 0;
     const int MAX_VAL = 10;
     int y; 
+
+    unsigned seed = time(0);
+    srand(seed);
 
     y = (rand() % ( MAX_VAL - MIN_VAL + 1)) + MIN_VAL; 
 
