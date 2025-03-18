@@ -70,8 +70,8 @@ void Names()
     const int MAX_VAL = 3;
     int y; 
 
-    y = (rand() % ( MAX_VAL − MIN_VAL + 1)) + MIN_VAL; 
-
+    y = (rand() % ( MAX_VAL - MIN_VAL + 1)) + MIN_VAL; 
+    
     string arr[3] = {"Jeff", "Jane", "Jack" };
     cout << arr[y] << endl;
 }
