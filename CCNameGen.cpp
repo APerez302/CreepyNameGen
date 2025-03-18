@@ -5,11 +5,16 @@ using namespace std;
 // and thought it'd be fun to make a creepy pasta
 // name generator. So this is it.
 
-//Global access functions
+// Global access functions
+void Suffix();
+void Prefix();
+void Names();
 
 int main()
 {
     char choice;
+    char name;
+    char adj;
     cout << "-----------------------------" << endl
          << "Generate Name Type 1 (G)" << endl
          << "EX: Eyeless Jack, Laughing Jack" << endl
@@ -19,16 +24,47 @@ int main()
          << "-----------------------------" << endl;
     cout << "Please pick an option: ";
     cin >> choice;
-    
-    switch(choice)
+
+    switch (choice)
     {
-        case 'Q': cout << "Exiting program." << endl;
+    case 'G':
+        cout << "Generating name." << endl;
+        Prefix();
+        Names();
+        break;
+
+    case 'F':
+        cout << "Generating name." << endl;
+        Suffix();
+        Names();
+        break;
+
+    case 'Q':
+        cout << "Exiting program." << endl;
         exit(0);
         break;
-        default: cout << "You did not enter a valid input." << endl;
+
+    default:
+        cout << "You did not enter a valid input." << endl;
     }
-    // Going to have three random generators
-    // two for the adjectives and one for the name.
 
     return 0;
+}
+
+// Now we have 3 random generators.
+// Two for the 'adjectives' and one for the name.
+
+void Suffix()
+{
+    cout << "Suffix" << endl;
+}
+
+void Prefix()
+{
+    cout << "Prefix" << endl;
+}
+
+void Names()
+{
+    cout << "Name" << endl;
 }
