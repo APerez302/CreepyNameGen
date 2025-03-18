@@ -36,8 +36,8 @@ int main()
 
     case 'F':
         cout << "Generating name." << endl;
-        Suffix();
         Names();
+        Suffix();
         break;
 
     case 'Q':
