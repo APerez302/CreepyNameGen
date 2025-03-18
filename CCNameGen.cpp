@@ -67,11 +67,13 @@ void Prefix()
 void Names()
 {
     const int MIN_VAL = 0;
-    const int MAX_VAL = 3;
+    const int MAX_VAL = 10;
     int y; 
 
     y = (rand() % ( MAX_VAL - MIN_VAL + 1)) + MIN_VAL; 
-    
-    string arr[3] = {"Jeff", "Jane", "Jack" };
+
+    string arr[10] = {"Jeff", "Jane", "Jack", "Jill", "Ray", 
+        "Joe", "Bob", "Amanda", "Angela", "Shayne" };
+
     cout << arr[y] << endl;
 }
