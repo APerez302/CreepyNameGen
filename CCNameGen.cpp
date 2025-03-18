@@ -1,4 +1,5 @@
 #include <iostream>
+#include <cstdlib>
 using namespace std;
 
 // I've been watching a lot of CreepCast
@@ -14,7 +15,6 @@ int main()
 {
     char choice;
     char name;
-    char adj;
     cout << "-----------------------------" << endl
          << "Generate Name Type 1 (G)" << endl
          << "EX: Eyeless Jack, Laughing Jack" << endl
@@ -66,5 +66,12 @@ void Prefix()
 
 void Names()
 {
-    cout << "Name" << endl;
+    const int MIN_VAL = 0;
+    const int MAX_VAL = 3;
+    int y; 
+
+    y = (rand() % ( MAX_VAL − MIN_VAL + 1)) + MIN_VAL; 
+
+    string arr[3] = {"Jeff", "Jane", "Jack" };
+    cout << arr[y] << endl;
 }
