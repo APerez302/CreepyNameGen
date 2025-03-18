@@ -57,12 +57,37 @@ int main()
 
 void Suffix()
 {
-    cout << "Suffix" << endl;
+    const int MIN_VAL = 0;
+    const int MAX_VAL = 10;
+    int y; 
+
+    unsigned seed = time(0);
+    srand(seed);
+    //I learned this method from my college textbook
+    //"Starting Out With C++ From Control Structures Through Objects 8th Ed." 
+    //- Tony Gaddis
+
+    y = (rand() % ( MAX_VAL - MIN_VAL + 1)) + MIN_VAL; 
+
+    string arr[100] = { };
+
+    cout << arr[y] << endl;
 }
 
 void Prefix()
 {
-    cout << "Prefix" << endl;
+    const int MIN_VAL = 0;
+    const int MAX_VAL = 10;
+    int y; 
+
+    unsigned seed = time(0);
+    srand(seed);
+
+    y = (rand() % ( MAX_VAL - MIN_VAL + 1)) + MIN_VAL; 
+
+    string arr[100] = { };
+
+    cout << arr[y] << endl;
 }
 
 void Names()
@@ -76,8 +101,9 @@ void Names()
 
     y = (rand() % ( MAX_VAL - MIN_VAL + 1)) + MIN_VAL; 
 
-    string arr[10] = {"Jeff", "Jane", "Jack", "Jill", "Ray", 
-        "Joe", "Bob", "Amanda", "Angela", "Shayne" };
+    string arr[100] = {"Jeff", "Jane", "Jack", "Hunter", "Isaiah", 
+        "Jill", "Ray", "Joe", "Bob", "Amanda", "Angela", 
+        "Shayne", "Courtney" };
 
     cout << arr[y] << endl;
 }
