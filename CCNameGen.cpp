@@ -55,37 +55,40 @@ int main()
 // Now we have 3 random generators.
 // Two for the 'adjectives' and one for the name.
 
+// This is the stuff that comes after the name
 void Suffix()
 {
     const int MIN_VAL = 0;
-    const int MAX_VAL = 10;
-    int y; 
+    const int MAX_VAL = 5;
+    int y;
 
     unsigned seed = time(0);
     srand(seed);
-    //I learned this method from my college textbook
-    //"Starting Out With C++ From Control Structures Through Objects 8th Ed." 
+    // I learned this method from my college textbook
+    //"Starting Out With C++ From Control Structures Through Objects 8th Ed."
     //- Tony Gaddis
 
-    y = (rand() % ( MAX_VAL - MIN_VAL + 1)) + MIN_VAL; 
+    y = (rand() % (MAX_VAL - MIN_VAL + 1)) + MIN_VAL;
 
-    string arr[100] = { };
+    string arr[5] = {"the Killer", ".EXE", "Drowned", "from Hell", "the Painter"};
 
     cout << arr[y] << endl;
 }
 
+// I don't know what to call this other than prefix but it's the stuff that comes before the name
 void Prefix()
 {
     const int MIN_VAL = 0;
     const int MAX_VAL = 10;
-    int y; 
+    int y;
 
     unsigned seed = time(0);
     srand(seed);
 
-    y = (rand() % ( MAX_VAL - MIN_VAL + 1)) + MIN_VAL; 
+    y = (rand() % (MAX_VAL - MIN_VAL + 1)) + MIN_VAL;
 
-    string arr[100] = { };
+    string arr[10] = {"Laughing", "Eyeless", "Evil", "Giant", "Dead",
+    "Lost", "Dr.", "Bloody", "Scary", "My Friend:"};
 
     cout << arr[y] << endl;
 }
@@ -93,17 +96,25 @@ void Prefix()
 void Names()
 {
     const int MIN_VAL = 0;
-    const int MAX_VAL = 10;
-    int y; 
+    const int MAX_VAL = 77;
+    int y;
 
     unsigned seed = time(0);
     srand(seed);
 
-    y = (rand() % ( MAX_VAL - MIN_VAL + 1)) + MIN_VAL; 
+    y = (rand() % (MAX_VAL - MIN_VAL + 1)) + MIN_VAL;
 
-    string arr[100] = {"Jeff", "Jane", "Jack", "Hunter", "Isaiah", 
-        "Jill", "Ray", "Joe", "Bob", "Amanda", "Angela", 
-        "Shayne", "Courtney" };
+    string arr[77] = {"Jeff", "Jane", "Jack", "Hunter", "Isaiah",
+                       "Jill", "Ray", "Joe", "Bob", "Amanda", "Angela", "Nick",
+                       "Shayne", "Courtney", "John", "Jordan", "Janet", "Erica",
+                       "Kim", "Steve", "Noah", "Keith", "Olivia", "Anthony", "Ian",
+                       "Damien", "Spencer", "Charlotte", "Max", "Erik", "Toby", "Carlos",
+                       "Tommy", "Mac", "Josh", "Orlando", "Joey", "Alyssa", "Cole",
+                       "Brandon", "Jack", "Gary", "Terry", "Jerry", "Amy", "Ron", "Anne",
+                       "Chris", "April", "Andy", "Percy", "Rob", "Robert", "Mike", "Matt",
+                       "Nate", "Kate", "Andy", "Rose", "Leslie", "Kenny", "Tom", "Bea",
+                       "Ash", "Dawn", "Rick", "Shawn", "Arasha", "Garret", "Rhett", "Link",
+                       "Trevor", "Nicole", "Brad", "Aaron", "Ruby", "Amber"};
 
     cout << arr[y] << endl;
 }
